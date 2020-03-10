@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   state = {
-    isLoading: false
+    isLoading: true
   };
 
   render() {
@@ -11,11 +11,14 @@ export default class App extends React.Component {
 
     return (
       <View style={styles.container}>
-        {isLoading ? null : (
+
+        {/* This displays "Fetching Weather" when we make the API request and we are waiting for the response. */}
+        {isLoading ? (<Text>Fetching Weather</Text>) : (
           <View>
             <Text>Minimalist Weather App</Text>
           </View>
         )}
+
       </View>
     );
   }
