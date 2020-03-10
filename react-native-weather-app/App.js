@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Weather from './components/Weather';
 
 export default class App extends React.Component {
   state = {
-    isLoading: true
+    isLoading: false
   };
 
   render() {
@@ -15,7 +16,7 @@ export default class App extends React.Component {
         {/* This displays "Fetching Weather" when we make the API request and we are waiting for the response. */}
         {isLoading ? (<Text>Fetching Weather</Text>) : (
           <View>
-            <Text>Minimalist Weather App</Text>
+            <Weather />
           </View>
         )}
 
