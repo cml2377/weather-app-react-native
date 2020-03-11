@@ -49,7 +49,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
 
         {/* This displays "Fetching Weather" when we make the API request and we are waiting for the response. */}
-        {isLoading ? (<Text>Fetching Weather</Text>) : (
+        {isLoading ? (<Text style={styles.loadingText}>Fetching Weather</Text>) : (
           <View>
             <Weather weather={weatherCondition} temperature={temperature} />
           </View>
@@ -72,6 +72,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFDE4'
   },
   loadingText: {
-    fontSize: 30
+    fontSize: 30,
+    fontWeight: '300',
+    textAlign: 'center',
+
   }
 });

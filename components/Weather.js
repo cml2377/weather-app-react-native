@@ -66,11 +66,13 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 60,
-        color: '#fff'
+        color: '#fff',
+        fontWeight: '300'
     },
     subtitle: {
         fontSize: 24,
-        color: '#fff'
+        color: '#fff',
+        fontWeight: '300'
     }
 });
 
